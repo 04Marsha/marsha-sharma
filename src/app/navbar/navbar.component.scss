@@ -1,0 +1,12 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    margin: 30px 80px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+}

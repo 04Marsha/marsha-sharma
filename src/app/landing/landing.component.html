@@ -1,0 +1,18 @@
+<div class="loader" *ngIf="isLoading">
+  <app-loader></app-loader>
+</div>
+<div class="landing-container" *ngIf="!isLoading">
+  <div class="light-container">
+    <app-spotlight></app-spotlight>
+  </div>
+  <div class="navbar">
+    <app-navbar></app-navbar>
+  </div>
+  <h1 class="intro-text">
+    I am Marsha — A
+    <span class="intro-text" id="highlight">creative</span>
+    developer who thinks like a designer and builds like an engineer.
+  </h1>
+  <p class="sub-text" id="sub-line"></p>
+  <div class="black-overlay"></div>
+</div>
