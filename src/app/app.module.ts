@@ -10,6 +10,7 @@ import { MyApproachComponent } from './myApproach/myApproach.component';
 import { AboutComponent } from './about/about.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { SkillsComponent } from './skills/skills.component';
+import { CertificatesComponent } from './Certificates/certificates.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { SkillsComponent } from './skills/skills.component';
     MyApproachComponent,
     ProjectsComponent,
     SkillsComponent,
+    CertificatesComponent,
     AboutComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, UIElementsModule],

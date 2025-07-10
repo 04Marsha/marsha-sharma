@@ -1,0 +1,31 @@
+<section class="certificates-section">
+  <h2 class="section-heading">Certificates</h2>
+
+  <div class="carousel">
+    <button #prevBtn (click)="goPrev()" class="nav prev">&lt;</button>
+
+    <div class="carousel-track-container">
+      <div class="carousel-track" #track>
+        <div
+          class="carousel-slide"
+          #slide
+          *ngFor="let certificate of certificates"
+        >
+          <img [src]="certificate.img" alt="Certificate" />
+        </div>
+      </div>
+    </div>
+
+    <button #nextBtn (click)="goNext()" class="nav next">&gt;</button>
+
+    <div class="carousel-nav">
+      <button
+        class="carousel-indicator"
+        #dot
+        *ngFor="let cert of certificates; let i = index"
+        [class.current-slide]="i === currentIndex"
+        (click)="goToSlide(i)"
+      ></button>
+    </div>
+  </div>
+</section>
