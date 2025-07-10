@@ -16,7 +16,8 @@ import { ProjectsComponent } from './projects/projects.component';
     LandingComponent,
     NavbarComponent,
     MyApproachComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
