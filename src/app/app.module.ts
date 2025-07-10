@@ -9,6 +9,7 @@ import { UIElementsModule } from './UIElements/UIElements.module';
 import { MyApproachComponent } from './myApproach/myApproach.component';
 import { AboutComponent } from './about/about.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { SkillsComponent } from './skills/skills.component';
 
 @NgModule({
   declarations: [
@@ -17,14 +18,11 @@ import { ProjectsComponent } from './projects/projects.component';
     NavbarComponent,
     MyApproachComponent,
     ProjectsComponent,
-    AboutComponent
+    SkillsComponent,
+    AboutComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    UIElementsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, UIElementsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
