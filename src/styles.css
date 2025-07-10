@@ -11,6 +11,7 @@ body {
   overflow: hidden;
   background-color: #0e0e0e;
   font-family: "Work Sans";
+  scroll-behavior: smooth;
 }
 
 .snap-container {
@@ -18,10 +19,12 @@ body {
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
 }
 
 .snap-section {
-  height: 100vh;
+  min-height: 100vh;
   scroll-snap-align: start;
   scroll-snap-stop: always;
 }
