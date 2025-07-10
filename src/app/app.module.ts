@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { UIElementsModule } from './UIElements/UIElements.module';
+import { MyApproachComponent } from './myApproach/myApproach.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingComponent,
     NavbarComponent,
+    MyApproachComponent
   ],
   imports: [
     BrowserModule,
