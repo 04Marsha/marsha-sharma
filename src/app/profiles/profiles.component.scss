@@ -3,6 +3,7 @@
   color: white;
   background-color: #000000f1;
   padding-bottom: 60px;
+  padding-top: 70px;
 }
 
 .certificates-section {
@@ -28,7 +29,7 @@
     &:nth-child(1) {
       a {
         &::before {
-          background: grey;
+          background: #5c3382;
         }
       }
     }
@@ -41,7 +42,7 @@
       }
     }
 
-    &:nth-child(4) {
+    &:nth-child(3) {
       a {
         &::before {
           background: #ffa217;
@@ -72,7 +73,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: #f00;
+      background: white;
       transition: 0.5s;
       z-index: 2;
     }
@@ -94,5 +95,44 @@
   ul li a:hover .icon {
     color: #fff;
     transform: rotateY(360deg);
+  }
+}
+// @media (max-width: 992px) {
+//   .certificates-section {
+//     .section-heading {
+//       font-size: 2.5rem; // Slightly reduce heading size
+//       margin-bottom: 60px;
+//     }
+
+//     ul {
+//       flex-wrap: wrap; // Allow items to wrap to the next line
+//       padding: 0 20px; // Add some horizontal padding
+//     }
+
+//     ul li a {
+//       width: 70px; // Slightly smaller icons
+//       height: 70px;
+//       line-height: 70px;
+//       font-size: 30px;
+//       margin: 0 20px 30px;
+//     }
+//   }
+// }
+
+@media (max-width: 576px) {
+  :host {
+    padding-bottom: 30px;
+  }
+
+  .certificates-section {
+    .section-heading {
+      font-size: 1.7rem;
+      margin-bottom: 40px;
+    }
+
+    ul {
+      flex-direction: column;
+    }
+
   }
 }

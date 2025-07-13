@@ -87,6 +87,9 @@
 }
 
 @media (max-width: 768px) {
+  // .section-heading {
+  //   font-size: 1.7rem;
+  // }
   .certificates-section {
     padding: 60px 20px;
 
@@ -96,6 +99,15 @@
 
     .carousel .nav.next {
       right: 5px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .certificates-section {
+    padding: 20px 20px;
+    .section-heading {
+      font-size: 1.7rem;
     }
   }
 }

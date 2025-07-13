@@ -20,7 +20,7 @@
   opacity: 0.55;
   mix-blend-mode: screen;
   transform: rotate(var(--angle));
-  animation: oscillate 1.2s ease-in-out infinite alternate;
+  animation: oscillate 1s ease-in-out infinite alternate;
 }
 .db {
   background: radial-gradient(

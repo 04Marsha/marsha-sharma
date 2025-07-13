@@ -7,11 +7,11 @@ import { LandingComponent } from './landing/landing.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { UIElementsModule } from './UIElements/UIElements.module';
 import { MyApproachComponent } from './myApproach/myApproach.component';
-import { AboutComponent } from './about/about.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { SkillsComponent } from './skills/skills.component';
-import { CertificatesComponent } from './Certificates/certificates.component';
+import { CertificatesComponent } from './certificates/certificates.component';
 import { ProfilesComponent } from './profiles/profiles.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -22,8 +22,8 @@ import { ProfilesComponent } from './profiles/profiles.component';
     ProjectsComponent,
     SkillsComponent,
     CertificatesComponent,
-    AboutComponent,
-    ProfilesComponent
+    ProfilesComponent,
+    ContactComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, UIElementsModule],
   providers: [],
