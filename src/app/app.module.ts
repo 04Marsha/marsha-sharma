@@ -11,7 +11,8 @@ import { ProjectsComponent } from './projects/projects.component';
 import { SkillsComponent } from './skills/skills.component';
 import { CertificatesComponent } from './certificates/certificates.component';
 import { ProfilesComponent } from './profiles/profiles.component';
-import { ContactComponent } from './contact/contact.component';
+import { ContactBtnComponent } from './contact-btn/contact-btn.component';
+import { NavLinksModule } from './navLinks/navLinks.module';
 
 @NgModule({
   declarations: [
@@ -23,9 +24,9 @@ import { ContactComponent } from './contact/contact.component';
     SkillsComponent,
     CertificatesComponent,
     ProfilesComponent,
-    ContactComponent,
+    ContactBtnComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, UIElementsModule],
+  imports: [BrowserModule, AppRoutingModule, UIElementsModule, NavLinksModule],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,9 +1,9 @@
 <div class="navbar">
   <div class="nav-links large-screens">
-    <span class="home"> <a href=""> Home </a> </span>
-    <span> <a href=""> About </a> </span>
-    <span> <a href=""> Work </a> </span>
-    <span> <a href=""> Contact </a> </span>
+    <span class="home"> <a routerLink="/"> Home </a> </span>
+    <span> <a routerLink="/about"> About </a> </span>
+    <span> <a routerLink="/work"> Work </a> </span>
+    <span> <a routerLink="/contact"> Contact </a> </span>
   </div>
 
   <div class="hamburger">
@@ -11,9 +11,9 @@
   </div>
 
   <div class="small-screens" [class.show]="menuOpen">
-    <span> <a href="">Home</a> </span>
-    <span> <a href="">About</a> </span>
-    <span> <a href="">Work</a> </span>
-    <span> <a href="">Contact</a> </span>
+    <span> <a routerLink="/">Home</a> </span>
+    <span> <a routerLink="/about">About</a> </span>
+    <span> <a routerLink="/work">Work</a> </span>
+    <span> <a routerLink="/contact">Contact</a> </span>
   </div>
 </div>
