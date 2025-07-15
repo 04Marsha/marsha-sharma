@@ -11,6 +11,6 @@ export class WorkComponent implements OnInit {
   ngOnInit(): void {
     setTimeout(() => {
       this.isLoading = false;
-    }, 0); //scrolling time
+    }, 1000); //scrolling time
   }
 }

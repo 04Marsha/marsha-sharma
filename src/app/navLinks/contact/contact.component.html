@@ -1,4 +1,158 @@
 <div class="loader" *ngIf="isLoading">
   <app-loader></app-loader>
 </div>
-<h1 *ngIf="!isLoading">Contact works</h1>
+<section class="contact-page" *ngIf="!isLoading">
+  <div class="container">
+    <h1>Get in Touch</h1>
+    <p class="intro-text">
+      Passion-driven. Pixel-perfect. Always curious. <br />
+      Let&rsquo;s build, brainstorm, or simply chat — whatever brings you here,
+      I&rsquo;m all ears. Drop a message using the contact options below!
+    </p>
+
+    <div class="contact-content">
+      <div class="contact-form-section">
+        <h2>Send a Message</h2>
+        <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              [(ngModel)]="contactData.name"
+              required
+              #name="ngModel"
+            />
+            <div
+              *ngIf="name.invalid && (name.dirty || name.touched)"
+              class="error-message"
+            >
+              * Name is required.
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              [(ngModel)]="contactData.email"
+              required
+              email
+              #email="ngModel"
+            />
+            <div
+              *ngIf="email.invalid && (email.dirty || email.touched)"
+              class="error-message"
+            >
+              * Please enter a valid email.
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              [(ngModel)]="contactData.subject"
+              required
+              #subject="ngModel"
+            />
+            <div
+              *ngIf="subject.invalid && (subject.dirty || subject.touched)"
+              class="error-message"
+            >
+              * Subject is required.
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              [(ngModel)]="contactData.message"
+              required
+              #message="ngModel"
+            ></textarea>
+            <div
+              *ngIf="message.invalid && (message.dirty || message.touched)"
+              class="error-message"
+            >
+              * Message is required.
+            </div>
+          </div>
+
+          <button type="submit" [disabled]="!contactForm.form.valid">
+            Send Message
+          </button>
+
+          <div
+            *ngIf="formStatus"
+            [ngClass]="{
+              success: formStatus === 'success',
+              error: formStatus === 'error'
+            }"
+            class="form-status-message"
+          >
+            <ng-container *ngIf="formStatus === 'success'">
+              Thank you for your message! I'll get back to you soon.
+            </ng-container>
+            <ng-container *ngIf="formStatus === 'error'">
+              Oops! Something went wrong. Please try again later or contact me
+              directly.
+            </ng-container>
+          </div>
+        </form>
+      </div>
+
+      <div class="contact-info-section">
+        <h2>Other Ways to Connect</h2>
+        <div class="social-grid">
+          <a
+            class="social-card"
+            target="_blank"
+          >
+            <i class="fas fa-envelope"></i>
+            <span>Email</span>
+            <p>marshasharma2004&#64;gmail.com</p>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/marsha-sharma-8b99b42b5/"
+            class="social-card"
+            target="_blank"
+          >
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn</span>
+            <p>marsha-sharma-8b99b42b5</p>
+          </a>
+
+          <a
+            href="https://github.com/04Marsha"
+            class="social-card"
+            target="_blank"
+          >
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+            <p>04Marsha</p>
+          </a>
+
+          <a
+            href="https://x.com/marsha32477?t=Z2pZDeAQI1gXcT-OT1kMaw&s=08"
+            class="social-card"
+            target="_blank"
+          >
+            <i class="fab fa-twitter"></i>
+            <span>Twitter</span>
+            <p>marsha32477</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

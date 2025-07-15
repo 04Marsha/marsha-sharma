@@ -21,6 +21,7 @@ export class CertificatesComponent implements AfterViewInit {
   @ViewChild('nextBtn') nextBtnRef!: ElementRef;
   certificates = [
     {img: 'certificates/angular.jpg'},
+    {img: 'certificates/pygame.jpg'},
   ]
 
   currentIndex = 0;

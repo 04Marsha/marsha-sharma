@@ -1,4 +1,7 @@
-<section class="work-section">
+<div class="loader" *ngIf="isLoading">
+  <app-loader />
+</div>
+<section class="work-section" *ngIf="!isLoading">
   <h2 class="section-title">Work</h2>
 
   <div class="projects-grid">
