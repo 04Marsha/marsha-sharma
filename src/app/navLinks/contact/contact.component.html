@@ -2,6 +2,9 @@
   <app-loader></app-loader>
 </div>
 <section class="contact-page" *ngIf="!isLoading">
+  <a class="back-button" routerLink="/">
+    <i class="fas fa-arrow-left"></i>
+  </a>
   <div class="container">
     <h1>Get in Touch</h1>
     <p class="intro-text">
@@ -113,10 +116,7 @@
       <div class="contact-info-section">
         <h2>Other Ways to Connect</h2>
         <div class="social-grid">
-          <a
-            class="social-card"
-            target="_blank"
-          >
+          <a class="social-card" target="_blank">
             <i class="fas fa-envelope"></i>
             <span>Email</span>
             <p>marshasharma2004&#64;gmail.com</p>

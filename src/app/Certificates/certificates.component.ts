@@ -2,6 +2,7 @@ import {
   AfterViewInit,
   Component,
   ElementRef,
+  HostListener,
   QueryList,
   ViewChild,
   ViewChildren,
@@ -19,17 +20,26 @@ export class CertificatesComponent implements AfterViewInit {
   @ViewChildren('dot') dotRefs!: QueryList<ElementRef>;
   @ViewChild('prevBtn') prevBtnRef!: ElementRef;
   @ViewChild('nextBtn') nextBtnRef!: ElementRef;
+
   certificates = [
-    {img: 'certificates/angular.jpg'},
-    {img: 'certificates/MEAN.jpg'},
-    {img: 'certificates/pygame.jpg'},
-  ]
+    { img: 'certificates/angular.jpg' },
+    { img: 'certificates/MEAN.jpg' },
+    { img: 'certificates/getting_started_with_AI.jpg' },
+    { img: 'certificates/pygame.jpg' },
+  ];
 
   currentIndex = 0;
 
   ngAfterViewInit(): void {
     this.setSlidesPosition();
     this.showSlide(this.currentIndex);
+  }
+
+  // 👇 Listen to screen resize
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    this.setSlidesPosition();
+    this.showSlide(this.currentIndex); // Maintain current view
   }
 
   setSlidesPosition(): void {
@@ -46,10 +56,11 @@ export class CertificatesComponent implements AfterViewInit {
 
     if (index < 0 || index >= slides.length) return;
 
-    track.style.transform = `translateX(-${slides[index].style.left})`;
+    const targetSlide = slides[index];
+    track.style.transform = `translateX(-${targetSlide.style.left})`;
 
     slides.forEach((slide) => slide.classList.remove('current-slide'));
-    slides[index].classList.add('current-slide');
+    targetSlide.classList.add('current-slide');
 
     this.currentIndex = index;
 
@@ -58,6 +69,7 @@ export class CertificatesComponent implements AfterViewInit {
     this.nextBtnRef.nativeElement.style.display =
       index === slides.length - 1 ? 'none' : 'block';
   }
+
   goNext(): void {
     this.showSlide(this.currentIndex + 1);
   }

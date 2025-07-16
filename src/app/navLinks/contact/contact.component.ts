@@ -18,7 +18,7 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
     setTimeout(() => {
       this.isLoading = false;
-    }, 0);
+    }, 1000);
   }
   contactData: ContactFormData = {
     name: '',
