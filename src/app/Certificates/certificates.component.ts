@@ -35,11 +35,10 @@ export class CertificatesComponent implements AfterViewInit {
     this.showSlide(this.currentIndex);
   }
 
-  // 👇 Listen to screen resize
   @HostListener('window:resize', ['$event'])
   onResize() {
     this.setSlidesPosition();
-    this.showSlide(this.currentIndex); // Maintain current view
+    this.showSlide(this.currentIndex);
   }
 
   setSlidesPosition(): void {

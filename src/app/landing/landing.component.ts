@@ -46,7 +46,7 @@ export class LandingComponent implements AfterViewInit {
           },
         });
       }, 50);
-    }, 0); //scrolling time
+    }, 1000); //scrolling time
   }
 
   animateSubtitle() {

@@ -27,23 +27,16 @@ export class ContactComponent implements OnInit {
     message: '',
   };
 
-  // To display form submission status
   formStatus: 'success' | 'error' | null = null;
 
   constructor() {}
 
-  /**
-   * Handles the form submission.
-   * In a real application, you would send this data to a backend service.
-   */
   onSubmit(): void {
     console.log('Form Submitted!', this.contactData);
 
-    // Simulate an API call
     this.simulateApiCall().then(
       (response) => {
         this.formStatus = 'success';
-        // Optionally, reset the form after successful submission
         this.resetForm();
       },
       (error) => {
@@ -53,26 +46,19 @@ export class ContactComponent implements OnInit {
     );
   }
 
-  /**
-   * Simulates an asynchronous API call for form submission.
-   * Replace this with actual HTTP client logic to your backend.
-   */
   private simulateApiCall(): Promise<any> {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        const success = Math.random() > 0.1; // 90% chance of success for demo
+        const success = Math.random() > 0.1;
         if (success) {
           resolve({ message: 'Form submitted successfully!' });
         } else {
           reject({ message: 'Failed to submit form.' });
         }
-      }, 1500); // Simulate network delay
+      }, 1500);
     });
   }
 
-  /**
-   * Resets the form after submission.
-   */
   private resetForm(): void {
     this.contactData = {
       name: '',
@@ -80,7 +66,5 @@ export class ContactComponent implements OnInit {
       subject: '',
       message: '',
     };
-    // If you're using @ViewChild to get the form directive, you'd call form.reset() here.
-    // For this example, re-initializing ngModel data is sufficient.
   }
 }

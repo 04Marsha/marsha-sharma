@@ -1,28 +1,40 @@
 <div class="loader" *ngIf="isLoading">
   <app-loader></app-loader>
 </div>
-<section class="about-container" *ngIf="!isLoading">
-  <div class="about-text">
-    <h1>Hey there, I&rsquo;m Marsha</h1>
-    <p>
-      
-    </p>
-    <p>
-      
-    <p>
-      
-    </p>
-  </div>
 
-  <aside class="about-sidebar">
-    <img
-      src="me.jpg"
-      alt="Marsha Profile"
-      class="profile-photo"
-    />
-    <div class="contact-info">
-      <p><strong>Email</strong><br />marshasharma2004&#64;gmail.com</p>
-      <p><strong>Location</strong><br />Durgapur, West Bengal</p>
+<section class="about-container" *ngIf="!isLoading">
+  <a class="back-button" routerLink="/">
+    <i class="fas fa-arrow-left"></i>
+  </a>
+
+  <h2 class="section-title">About me</h2>
+
+  <div class="about-content">
+    <div class="about-text">
+      <h1>Hey there, I&rsquo;m Marsha</h1>
+      <p>
+        I am a passionate student with a focus on the MEAN stack, blending
+        technical precision with user-centric design. I enjoy building robust,
+        scalable applications from the ground up — from backend logic to
+        designing intuitive and responsive frontends.
+      </p>
+      <p>
+        Whether I am exploring data structures or refining a UI for better
+        usability, I am always driven by the challenge of turning ideas into
+        efficient and impactful solutions.
+      </p>
+      <p>
+        My projects reflect my ability to think deeply, learn independently, and
+        build with purpose.
+      </p>
     </div>
-  </aside>
+
+    <aside class="about-sidebar">
+      <img src="me.jpg" alt="Marsha Profile" class="profile-photo" />
+      <div class="contact-info">
+        <p><strong>Email</strong><br />marshasharma2004&#64;gmail.com</p>
+        <p><strong>Location</strong><br />Durgapur, West Bengal</p>
+      </div>
+    </aside>
+  </div>
 </section>
