@@ -1,7 +1,7 @@
 <div class="loader" *ngIf="isLoading">
   <app-loader />
 </div>
-<section class="certificates">
+<section class="certificates" *ngIf="!isLoading">
   <a class="back-button" routerLink="/">
     <i class="fas fa-arrow-left"></i>
   </a>

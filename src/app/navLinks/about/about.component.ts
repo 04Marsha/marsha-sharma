@@ -11,6 +11,6 @@ export class AboutComponent implements OnInit {
   ngOnInit(): void {
     setTimeout(() => {
       this.isLoading = false;
-    }, 2000);
+    }, 0);
   }
 }
