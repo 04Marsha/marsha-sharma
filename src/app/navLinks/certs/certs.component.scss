@@ -1,3 +1,7 @@
+:host {
+  min-height: 100vh;
+}
+
 .loader {
   display: flex;
   align-items: center;
@@ -5,31 +9,56 @@
   height: 100vh;
 }
 
-:host {
-  display: block;
+.certificates {
   background-color: #000;
   color: #fff;
-  padding: 2rem;
-  min-height: 100vh;
-}
-
-.certificates {
-  max-width: 1200px;
+  padding: 80px 40px;
+  max-width: 1600px;
   margin: 0 auto;
+
+  .back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 45px;
+    height: 45px;
+    background-color: transparent;
+    border: 2px solid #e84393;
+    color: #e84393;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    z-index: 999;
+
+    i {
+      font-size: 1.2rem;
+      transition: transform 0.3s;
+    }
+
+    &:hover {
+      background-color: #e84393;
+      color: #121212;
+
+      i {
+        transform: translateX(-2px);
+      }
+    }
+  }
 
   h1 {
     text-align: center;
-    font-size: 2.5rem;
-    color: #00ffff;
-    margin-bottom: 2rem;
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 60px;
   }
 
   .certificate-list {
     display: grid;
-    grid-template-columns: repeat(
-      auto-fill,
-      minmax(320px, 1fr)
-    ); // increased from 260px
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
     gap: 2rem;
   }
 
@@ -43,7 +72,7 @@
 
     &:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0, 255, 255, 0.2);
+      box-shadow: 0 10px 20px rgba(0, 255, 255, 0.551);
     }
 
     img {
@@ -52,7 +81,7 @@
       display: block;
       object-fit: contain;
       image-rendering: auto;
-      aspect-ratio: 4 / 3; // Optional: keeps layout tidy
+      aspect-ratio: 4 / 3;
     }
 
     .info {
@@ -60,19 +89,20 @@
       text-align: center;
 
       h2 {
+        font-weight: 600;
         font-size: 1.4rem;
-        color: #00ffff;
+        color: #e84393;
         margin: 0.8rem 0;
       }
 
       p {
-        font-size: 1rem;
-        color: #ccc;
+        font-size: 1.1rem;
+        font-weight: 400;
+        color: white;
       }
     }
   }
 
-  // Modal styles
   .modal-overlay {
     position: fixed;
     top: 0;
@@ -101,7 +131,9 @@
 
     p {
       margin-top: 0.5rem;
-      color: #ccc;
+      color: white;
+      font-size: 1.3rem;
+      font-weight: 400;
     }
 
     .close-btn {
