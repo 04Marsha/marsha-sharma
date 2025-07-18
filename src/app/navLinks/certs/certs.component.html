@@ -1,6 +1,29 @@
 <div class="loader" *ngIf="isLoading">
   <app-loader />
 </div>
-<section class="work-section" *ngIf="!isLoading">
-    <h3>Cert works</h3>
+<section class="certificates">
+  <h1>My Certificates</h1>
+
+  <div class="certificate-list">
+    <div
+      class="certificate-card"
+      *ngFor="let cert of certificates"
+      (click)="openModal(cert.imageUrl, cert.title)"
+    >
+      <img [src]="cert.imageUrl" [alt]="cert.title" />
+      <div class="info">
+        <h2>{{ cert.title }}</h2>
+        <p>{{ cert.description }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal-overlay" *ngIf="modalOpen" (click)="closeModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <span class="close-btn" (click)="closeModal()">×</span>
+      <img [src]="modalImage" [alt]="modalTitle" />
+      <p>{{ modalTitle }}</p>
+    </div>
+  </div>
 </section>
