@@ -5,7 +5,6 @@ import { sendMail } from '../utils/mailer.js';
 const router = express.Router();
 
 router.post("/", (req, res) => {
-  console.log("Incoming data:", req.body);
 
   const newContact = new Contact({
     name: req.body.name,
