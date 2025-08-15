@@ -13,6 +13,7 @@ import { CertificatesComponent } from './certificates/certificates.component';
 import { ProfilesComponent } from './profiles/profiles.component';
 import { ContactBtnComponent } from './contact-btn/contact-btn.component';
 import { NavLinksModule } from './navLinks/navLinks.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { NavLinksModule } from './navLinks/navLinks.module';
     ProfilesComponent,
     ContactBtnComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, UIElementsModule, NavLinksModule],
+  imports: [BrowserModule, AppRoutingModule, UIElementsModule, NavLinksModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })

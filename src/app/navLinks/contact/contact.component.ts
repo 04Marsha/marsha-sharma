@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 interface ContactFormData {
   name: string;
@@ -13,13 +14,13 @@ interface ContactFormData {
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })
+
 export class ContactComponent implements OnInit {
   isLoading = true;
-  ngOnInit(): void {
-    setTimeout(() => {
-      this.isLoading = false;
-    }, 1000);
-  }
+  formStatus: 'success' | 'error' | null = null;
+
+  constructor(private http: HttpClient) {}
+
   contactData: ContactFormData = {
     name: '',
     email: '',
@@ -27,39 +28,37 @@ export class ContactComponent implements OnInit {
     message: '',
   };
 
-  formStatus: 'success' | 'error' | null = null;
-
-  constructor() {}
-
-  onSubmit(): void {
-    console.log('Form Submitted!', this.contactData);
-
-    this.simulateApiCall().then(
-      (response) => {
-        this.formStatus = 'success';
-        this.resetForm();
-      },
-      (error) => {
-        this.formStatus = 'error';
-        console.error('Form submission failed:', error);
-      }
-    );
+  ngOnInit(): void {
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 1000);
   }
 
-  private simulateApiCall(): Promise<any> {
-    return new Promise((resolve, reject) => {
+  onSubmit() {
+  this.isLoading = true;
+  this.formStatus = null;
+  this.http.post('http://localhost:5000/api/contact', this.contactData).subscribe({
+    next: () => {
+      this.formStatus = 'success';
+      this.isLoading = false;
+      this.resetForm();
+
       setTimeout(() => {
-        const success = Math.random() > 0.1;
-        if (success) {
-          resolve({ message: 'Form submitted successfully!' });
-        } else {
-          reject({ message: 'Failed to submit form.' });
-        }
-      }, 1500);
-    });
-  }
+        this.formStatus = null;
+      }, 3000);
+    },
+    error: () => {
+      this.formStatus = 'error';
+      this.isLoading = false;
 
-  private resetForm(): void {
+      setTimeout(() => {
+        this.formStatus = null;
+      }, 3000);
+    }
+  });
+}
+
+  private resetForm() {
     this.contactData = {
       name: '',
       email: '',
