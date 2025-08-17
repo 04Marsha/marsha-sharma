@@ -7,6 +7,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { CertsComponent } from './certs/certs.component';
 import { RouterModule } from '@angular/router';
+import { ExperienceComponent } from './experience/experience.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { RouterModule } from '@angular/router';
     ContactComponent,
     WorkComponent,
     CertsComponent,
+    ExperienceComponent
   ],
   exports: [AboutComponent, ContactComponent, WorkComponent, CertsComponent],
   imports: [CommonModule, UIElementsModule, FormsModule, RouterModule],
