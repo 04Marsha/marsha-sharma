@@ -14,6 +14,7 @@ import { ProfilesComponent } from './profiles/profiles.component';
 import { ContactBtnComponent } from './contact-btn/contact-btn.component';
 import { NavLinksModule } from './navLinks/navLinks.module';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,14 @@ import { HttpClientModule } from '@angular/common/http';
     ProfilesComponent,
     ContactBtnComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, UIElementsModule, NavLinksModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    UIElementsModule,
+    NavLinksModule,
+    HttpClientModule,
+    RouterModule.forRoot([]),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
