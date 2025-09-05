@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from '../../../environments/environments';
 
 interface ContactFormData {
   name: string;
@@ -37,7 +38,7 @@ export class ContactComponent implements OnInit {
   onSubmit() {
   this.isLoading = true;
   this.formStatus = null;
-  this.http.post('http://localhost:5000/api/contact', this.contactData).subscribe({
+  this.http.post(`${environment.apiUrl}/contact`, this.contactData).subscribe({
     next: () => {
       this.formStatus = 'success';
       this.isLoading = false;
