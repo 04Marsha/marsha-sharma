@@ -1,63 +1,52 @@
-# Portfolio
-<<<<<<< HEAD
-My Portfolio Website
-=======
+# 💻 My Portfolio Website
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.5.
+Welcome to my personal portfolio website!
+This site is a showcase of my skills, projects, and experiences as a developer.
+It’s designed to highlight my journey, technical expertise, and the work I’m most proud of.
 
-## Development server
+🌐 **Live Demo**: [https://04marsha.github.io/marsha-sharma/](https://04marsha.github.io/marsha-sharma/)
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
-```
+## ✨ Features
+- 🧑‍💼 **About Me** – A quick introduction to who I am and what I do
+- 🛠️ **Skills** – A snapshot of my technical expertise and tools I use
+- 📂 **Projects** – Highlights of my major works with live links & GitHub repos
+- 📜 **Certificates** – Verified achievements and credentials
+- 📞 **Contact** – Easy ways to get in touch with me
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## 🛠️ Tech Stack
+- **Frontend**: Angular
+- **Styling**: SCSS
+- **Hosting**: GitHub Pages, Render
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+---
 
-```bash
-ng generate component component-name
-```
+## 🎯 Purpose
+This portfolio is more than just a website. It is my professional identity online.
+It reflects:
+- My passion for coding & problem solving
+- My growth as a developer
+- My readiness for exciting opportunities in tech
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## 🚀 Future Improvements
+- Add a blog section for technical writing
+- Enhance animations and UI polish
+- Dark/light mode support
 
-## Building
+---
 
-To build the project run:
+## 🤝 Contributing
+This is my personal project, but feedback and suggestions are always welcome!
+Feel free to open an issue if you spot improvements.
 
-```bash
-ng build
-```
+---
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## 📜 License
+This project is licensed under the **MIT License**.  
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
->>>>>>> addfc31 (initial commit)
+---
