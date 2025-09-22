@@ -41,6 +41,14 @@ export class CertsComponent implements OnInit {
     },
   ];
 
+  internshipCertificates = [
+    {
+    title: "Emerging Technologies (AI & Cloud)",
+    description: "Edunet Foundation in Collaboration with AICTE",
+    imageUrl: "assets/certificates/internship/AIandCloud.png",
+  },
+  ];
+
   modalOpen = false;
   modalImage = '';
   modalTitle = '';

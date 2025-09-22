@@ -10,7 +10,7 @@
 }
 
 .certificates {
-  background-color: #000;
+  // background-color: #000;
   color: #fff;
   padding: 80px 40px;
   max-width: 1600px;
@@ -61,6 +61,17 @@
     }
   }
 
+  h2 {
+    margin: 4rem 0;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  #extra-margin {
+    margin-top: 9rem;
+  }
+
   .certificate-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
@@ -72,7 +83,8 @@
   }
 
   .certificate-card {
-    background-color: #1a1a1a;
+    // background-color: #1a1a1a;
+    background-color: #000;
     border: 1px solid #333;
     border-radius: 10px;
     overflow: hidden;
@@ -90,7 +102,7 @@
       display: block;
       object-fit: contain;
       image-rendering: auto;
-      aspect-ratio: 4 / 3;
+      // aspect-ratio: 4 / 3;
     }
 
     .info {

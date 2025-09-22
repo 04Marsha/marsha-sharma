@@ -1,31 +1,19 @@
 <div class="loader" *ngIf="isLoading">
   <app-loader></app-loader>
 </div>
+
 <section class="experience" *ngIf="!isLoading">
   <a class="back-button" routerLink="/">
     <i class="fas fa-arrow-left"></i>
   </a>
   <h1>Experience</h1>
-    <div class="experience-container">
 
-  <div class="icon-wrapper">
-    <div class="icon">🚧</div>
-    <div class="shadow"></div>
+  <div class="experience-grid">
+    <div class="experience-card" *ngFor="let exp of experiences">
+      <h2>{{ exp.role }}</h2>
+      <h3>{{ exp.company }}</h3>
+      <h4>{{ exp.duration }} </h4>
+      <p>{{ exp.description }}</p>
+    </div>
   </div>
-
-  <h1>🚀 Work in Progress</h1>
-
-  <p>
-    This page is under construction just like my journey.
-  </p>
-
-  <div class="progress-bar">
-    <div class="progress"></div>
-  </div>
-
-  <span class="footer-note">
-    Collecting experiences... Leveling up daily ⚡
-  </span>
-</div>
-
 </section>
