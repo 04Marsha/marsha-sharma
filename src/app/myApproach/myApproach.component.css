@@ -1,0 +1,77 @@
+:host {
+  display: block;
+  color: white;
+  background-color: #000000f1;
+}
+
+.my-approach-container {
+  color: white;
+  padding: 100px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  scroll-behavior: smooth;
+}
+
+.heading {
+  font-size: 3rem;
+  margin-bottom: 60px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 50px 80px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.approach-card {
+  background: transparent;
+  padding: 20px;
+  border-bottom: 1px solid #444;
+  transition: all 0.3s ease;
+}
+
+h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6rem;
+  color: #ccc;
+  font-weight: 400;
+}
+
+.approach-card:hover {
+  transform: translateY(-5px);
+}
+
+@media screen and (max-width: 768px) {
+  .approach-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 30px;
+  }
+
+  .approach-card {
+    border-bottom: 1px solid #333;
+    text-align: center;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .heading {
+    font-size: 1.7rem;
+  }
+}

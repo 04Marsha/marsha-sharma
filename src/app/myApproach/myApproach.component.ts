@@ -4,6 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-my-approach',
   standalone: false,
   templateUrl: './myApproach.component.html',
-  styleUrl: './myApproach.component.scss',
+  styleUrl: './myApproach.component.css',
 })
 export class MyApproachComponent {}

@@ -1,0 +1,132 @@
+:host {
+  display: block;
+  color: white;
+  background-color: #000000f1;
+  padding-bottom: 60px;
+  padding-top: 10px;
+}
+
+.certificates-section {
+  text-align: center;
+  background: #000000f1;
+  color: white;
+}
+
+.section-heading {
+  font-size: 3rem;
+  margin-bottom: 80px;
+  font-weight: 300;
+}
+
+.certificates-section > ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.certificates-section > ul > li {
+  list-style: none;
+}
+
+.certificates-section > ul > li:nth-child(1) a::before {
+  background: #585c63;
+}
+
+.certificates-section > ul > li:nth-child(2) a::before {
+  background: #55acee;
+}
+
+.certificates-section > ul > li:nth-child(3) a::before {
+  background: #ffa217;
+}
+
+.certificates-section > ul > li:nth-child(4) a::before {
+  background: #2e8c46;
+}
+
+.certificates-section > ul > li > a {
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  text-align: center;
+  line-height: 80px;
+  font-size: 35px;
+  margin: 0 40px;
+  display: block;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #fff;
+  z-index: 1;
+}
+
+.certificates-section > ul > li > a::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+.certificates-section > ul > li > a:hover::before {
+  top: 0;
+}
+
+.icon {
+  position: relative;
+  color: #262626;
+  transition: 0.5s;
+  z-index: 3;
+}
+
+ul li a:hover .icon {
+  color: #fff;
+  transform: rotateY(360deg);
+}
+
+@media (max-width: 992px) {
+  .section-heading {
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+  }
+
+  .certificates-section > ul {
+    flex-wrap: wrap;
+    padding: 0 20px;
+  }
+
+  .certificates-section > ul > li > a {
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    font-size: 30px;
+    margin: 0 20px 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  :host {
+    padding-bottom: 30px;
+  }
+
+  .certificates-section {
+    font-size: 1.7rem;
+    margin-bottom: 40px;
+  }
+
+  .certificates-section > ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 0;
+    justify-items: center;
+    padding: 0;
+  }
+
+  .certificates-section > ul > li > a {
+    margin: 0;
+  }
+}
