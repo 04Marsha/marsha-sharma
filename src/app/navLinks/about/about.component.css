@@ -41,21 +41,23 @@
   transition: all 0.3s ease;
   text-decoration: none;
   z-index: 10;
+}
 
-  i {
-    font-size: 1.2rem;
-    transition: transform 0.3s;
-  }
+.back-button i {
+  font-size: 1.2rem;
+  transition: transform 0.3s;
+}
 
-  &:hover {
-    background-color: #e84393;
-    color: #121212;
+.back-button:hover {
+  background-color: #e84393;
+  color: #121212;
+}
 
-    i {
-      transform: translateX(-2px);
-    }
-  }
+.back-button:hover > i {
+  transform: translateX(-2px);
+}
 
+.back-button {
   @media (max-width: 480px) {
     width: 38px;
     height: 38px;
@@ -123,40 +125,40 @@
   .button {
     display: flex;
     justify-content: center;
+  }
 
-    a {
-      color: white;
-      text-decoration: none;
-      padding-left: 10px;
-    }
+  a {
+    color: white;
+    text-decoration: none;
+    padding-left: 10px;
+  }
 
-    .btn {
-      padding: 15px 30px;
-      margin: 10px;
-      border: none;
-      cursor: pointer;
-      font-size: 1.5rem;
-      transition: all 0.3s ease;
-      font-family: "Work Sans";
-    }
+  .btn {
+    padding: 15px 30px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    font-family: "Work Sans";
+  }
 
-    .btn-pulse {
-      background-color: #e84393;
-      color: white;
-      animation: pulse 1.5s infinite;
-    }
+  .btn-pulse {
+    background-color: #e84393;
+    color: white;
+    animation: pulse 1.5s infinite;
+  }
+}
 
-    @keyframes pulse {
-      0% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.1);
-      }
-      100% {
-        transform: scale(1);
-      }
-    }
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 
@@ -166,44 +168,43 @@
   flex-direction: column;
   gap: 2rem;
   align-items: flex-start;
+}
+.profile-photo {
+  width: 280px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 0 20px #00ffff88;
+  margin-top: 12px;
 
-  .profile-photo {
-    width: 280px;
-    border-radius: 12px;
-    object-fit: cover;
-    box-shadow: 0 0 20px #00ffff88;
-    margin-top: 12px;
-
-    @media (max-width: 900px) {
-      width: 100%;
-      max-width: 300px;
-      margin: 0 auto;
-    }
+  @media (max-width: 900px) {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
   }
+}
 
-  .contact-info {
-    font-size: 1rem;
-    word-break: break-word;
+.contact-info {
+  font-size: 1rem;
+  word-break: break-word;
 
-    p {
-      margin-bottom: 1.8rem;
-      color: #eee;
-      font-size: 1.15rem;
+  p {
+    margin-bottom: 1.8rem;
+    color: #eee;
+    font-size: 1.15rem;
+    font-weight: 500;
+
+    @media (max-width: 600px) {
+      font-size: 1rem;
+    }
+
+    strong {
+      display: block;
+      color: #9f9f9f;
+      font-size: 1.1rem;
       font-weight: 500;
 
       @media (max-width: 600px) {
         font-size: 1rem;
-      }
-
-      strong {
-        display: block;
-        color: #9f9f9f;
-        font-size: 1.1rem;
-        font-weight: 500;
-
-        @media (max-width: 600px) {
-          font-size: 1rem;
-        }
       }
     }
   }

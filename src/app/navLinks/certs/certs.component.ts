@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-certs',
   standalone: false,
   templateUrl: './certs.component.html',
-  styleUrl: './certs.component.scss',
+  styleUrl: './certs.component.css',
 })
 export class CertsComponent implements OnInit {
   isLoading = true;
