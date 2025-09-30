@@ -4,7 +4,7 @@ import { Component } from "@angular/core";
     selector: 'app-spotlight',
     standalone: false,
     templateUrl: './spotlight.component.html',
-    styleUrl: './spotlight.component.scss'
+    styleUrl: './spotlight.component.css'
 })
 
 export class SpotLightComponent {}

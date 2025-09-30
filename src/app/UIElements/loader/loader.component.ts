@@ -4,7 +4,7 @@ import { Component } from "@angular/core";
     selector: 'app-loader',
     standalone: false,
     templateUrl: './loader.component.html',
-    styleUrl: './loader.component.scss'
+    styleUrl: './loader.component.css'
 })
 
 export class LoaderComponent {}
