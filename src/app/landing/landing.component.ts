@@ -5,7 +5,7 @@ import { gsap } from 'gsap';
   selector: 'app-landing',
   standalone: false,
   templateUrl: './landing.component.html',
-  styleUrls: ['./landing.component.scss'],
+  styleUrls: ['./landing.component.css'],
 })
 export class LandingComponent implements AfterViewInit {
   isLoading = true;
