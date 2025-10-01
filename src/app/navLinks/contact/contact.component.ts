@@ -13,7 +13,7 @@ interface ContactFormData {
   selector: 'app-contact',
   standalone: false,
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss',
+  styleUrls: ['./contact.component.css', './contactMediaQueries.css'],
 })
 
 export class ContactComponent implements OnInit {

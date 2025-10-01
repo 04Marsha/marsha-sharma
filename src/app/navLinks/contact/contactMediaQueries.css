@@ -1,0 +1,112 @@
+@media (min-width: 768px) {
+  .intro-text br {
+    display: inline;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-page {
+    padding: 60px 15px;
+  }
+
+  .contact-page h1 {
+    font-size: 2.2rem;
+  }
+
+  .intro-text {
+    font-size: 1.05rem;
+    margin-bottom: 40px;
+  }
+
+  .contact-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .contact-form-section,
+  .contact-info-section {
+    padding: 25px 20px;
+  }
+
+  .contact-page h2 {
+    font-size: 1.5rem;
+  }
+
+  .form-group label {
+    font-size: 1rem;
+  }
+
+  input,
+  textarea {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  button[type="submit"] {
+    font-size: 0.95rem;
+    padding: 10px 20px;
+  }
+
+  .social-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-page {
+    padding: 50px 10px;
+  }
+
+  .contact-page h1 {
+    font-size: 2rem;
+  }
+
+  .intro-text {
+    font-size: 1rem;
+  }
+
+  .contact-page h2 {
+    font-size: 1.3rem;
+  }
+
+  .form-group label {
+    font-size: 0.95rem;
+  }
+
+  input,
+  textarea {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .social-grid {
+    gap: 16px;
+  }
+
+  .social-card {
+    padding: 16px;
+  }
+
+  .social-card i {
+    font-size: 1.6rem;
+  }
+
+  .social-card span {
+    font-size: 1rem;
+  }
+
+  .social-card p {
+    font-size: 0.85rem;
+  }
+
+  .form-status-message {
+    font-size: 0.95rem;
+    padding: 14px 16px;
+  }
+}
