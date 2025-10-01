@@ -15,6 +15,7 @@ import { ContactBtnComponent } from './contact-btn/contact-btn.component';
 import { NavLinksModule } from './navLinks/navLinks.module';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { RouterModule } from '@angular/router';
     CertificatesComponent,
     ProfilesComponent,
     ContactBtnComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
