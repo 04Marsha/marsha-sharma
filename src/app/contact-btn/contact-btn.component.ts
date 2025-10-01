@@ -4,7 +4,7 @@ import { Component } from "@angular/core";
     selector: 'app-contact-btn',
     standalone: false,
     templateUrl: './contact-btn.component.html',
-    styleUrl: './contact-btn.component.scss'
+    styleUrl: './contact-btn.component.css'
 })
 
 export class ContactBtnComponent {}
