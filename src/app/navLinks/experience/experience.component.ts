@@ -11,7 +11,7 @@ interface Experience {
   selector: 'app-about',
   standalone: false,
   templateUrl: './experience.component.html',
-  styleUrl: './experience.component.scss',
+  styleUrl: './experience.component.css',
 })
 export class ExperienceComponent implements OnInit {
   isLoading = true;

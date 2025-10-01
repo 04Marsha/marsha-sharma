@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-work',
   standalone: false,
   templateUrl: './work.component.html',
-  styleUrl: './work.component.scss',
+  styleUrls: ['./work.component.css', './workMediaQueries.css'],
 })
 export class WorkComponent implements OnInit {
 

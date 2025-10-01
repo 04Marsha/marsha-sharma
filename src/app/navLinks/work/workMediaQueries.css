@@ -1,0 +1,159 @@
+@media (max-width: 768px) {
+  .work-section {
+    padding: 60px 20px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .projects-grid {
+    gap: 50px;
+  }
+
+  .project-card {
+    padding: 24px;
+    margin: 20px;
+  }
+
+  .project-image img {
+    max-width: 100%;
+  }
+
+  .project-title {
+    font-size: 1.5rem;
+  }
+
+  .project-description {
+    font-size: 1rem;
+  }
+
+  .tech-stack span {
+    font-size: 0.95rem;
+    padding: 8px 14px;
+  }
+
+  .project-links a {
+    font-size: 1rem;
+    padding: 6px 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .work-section {
+    padding: 40px 16px;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .projects-grid {
+    gap: 40px;
+  }
+
+  .project-card {
+    padding: 20px;
+  }
+
+  .project-title {
+    font-size: 1.3rem;
+  }
+
+  .project-description {
+    font-size: 0.95rem;
+  }
+
+  .tech-stack span {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+  }
+
+  .project-links a {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .work-section {
+    padding: 30px 10px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .project-card {
+    margin: 10px;
+  }
+
+  .project-description {
+    font-size: 0.9rem;
+  }
+
+  .tech-stack span {
+    padding: 5px 10px;
+  }
+
+  .project-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .project-links a {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 335px) {
+  .work-section {
+    padding: 24px 8px;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+  }
+
+  .projects-grid {
+    gap: 30px;
+  }
+
+  .project-card {
+    padding: 16px;
+    margin: 8px;
+  }
+
+  .project-image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .project-title {
+    font-size: 1.2rem;
+  }
+
+  .project-description {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .tech-stack span {
+    font-size: 0.75rem;
+    padding: 5px 10px;
+  }
+
+  .project-links {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .project-links a {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+    width: 100%;
+    text-align: center;
+  }
+}

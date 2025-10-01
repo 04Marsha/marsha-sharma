@@ -1,0 +1,111 @@
+:host {
+  min-height: 100vh;
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.experience {
+  color: #fff;
+  padding: 80px 40px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 45px;
+  height: 45px;
+  background-color: transparent;
+  border: 2px solid #e84393;
+  color: #e84393;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  z-index: 999;
+}
+
+.back-button i {
+  font-size: 1.2rem;
+  transition: transform 0.3s;
+}
+
+.back-button:hover {
+  background-color: #e84393;
+  color: #121212;
+}
+
+.back-button:hover i {
+  transform: translateX(-2px);
+}
+
+.experience h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 60px;
+}
+
+.experience-grid {
+  display: grid;
+  gap: 5rem;
+}
+
+.experience-card {
+  background: #000;
+  border: 2px solid #898383;
+  color: #fff;
+  padding: 2rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.experience-card:hover {
+  transform: translateY(-3px) scale(1);
+  border: 2px solid transparent;
+  border-image: linear-gradient(135deg, #54d688, #00b894, #e84393) 15;
+}
+
+.experience-card h2 {
+  font-size: 1.6rem;
+  color: #f676b4;
+  text-align: center;
+}
+
+.experience-card h3 {
+  color: #fff;
+  margin-top: 1rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.experience-card h4 {
+  color: #f4f39c;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+
+.experience-card p {
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+@media (max-width: 600px) {
+  .experience h1 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+  }
+}
