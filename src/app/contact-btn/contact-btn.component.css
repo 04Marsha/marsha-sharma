@@ -120,6 +120,8 @@
     padding: 2rem 0;
     align-items: center;
     gap: 2rem;
+    background-color: #000000;
+    box-shadow: none;
   }
 
   .text {
@@ -127,8 +129,8 @@
   }
 
   .icon-Container {
-    width: 25px;
     height: 25px;
+    width: 25px;
+    border: none;
   }
-
 }
