@@ -94,4 +94,5 @@ export class LandingComponent implements AfterViewInit {
       });
     });
   }
+
 }
