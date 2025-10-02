@@ -8,7 +8,7 @@
   margin-top: 100px;
 }
 
-.Btn-Container {
+.btn-Container {
   display: flex;
   width: 35rem;
   height: 8rem;
@@ -26,7 +26,6 @@
 .icon-Container {
   width: 95px;
   height: 95px;
-  /* background-color: #f59aff; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -101,41 +100,10 @@
   transform: translateX(10px);
 }
 
-/* @media (max-width: 1200px) {
-  .contact-container {
-    .btn {
-      font-size: 2.8rem;
-      padding: 1.2rem 2.5rem;
-    }
-  }
-}
-
 @media (max-width: 992px) {
   :host {
-    padding-bottom: 150px;
-    margin-top: 80px;
-  }
-  .contact-container {
-    .btn {
-      font-size: 2.5rem;
-      padding: 1rem 2rem;
-      min-width: 180px;
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  :host {
-    padding-bottom: 100px;
-    margin-top: 60px;
-  }
-  .contact-container {
-    .btn {
-      font-size: 2.2rem;
-      padding: 1rem 2rem;
-      min-width: 250px;
-      width: 50%;
-    }
+    padding-bottom: 120px;
+    margin-top: 50px;
   }
 }
 
@@ -144,12 +112,23 @@
     padding-bottom: 100px;
     margin-top: 50px;
   }
-  .contact-container {
-    .btn {
-      font-size: 1.7rem;
-      padding: 0.5rem 1.5rem;
-      min-width: unset;
-      width: 70%;
-    }
+
+  .btn-Container {
+    width: 100%;
+    margin: 0 1px;
+    height: auto;
+    padding: 2rem 0;
+    align-items: center;
+    gap: 2rem;
   }
-} */
+
+  .text {
+    font-size: 1.7rem;
+  }
+
+  .icon-Container {
+    width: 25px;
+    height: 25px;
+  }
+
+}
