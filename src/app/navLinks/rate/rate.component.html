@@ -1,0 +1,17 @@
+<div class="loader" *ngIf="isLoading">
+  <app-loader />
+</div>
+
+<div class="rate-section" *ngIf="!isLoading">
+  <h2 class="section-title">Please rate my Profile</h2>
+  <a class="back-button" routerLink="/">
+    <i class="fas fa-arrow-left"></i>
+  </a>
+  <div class="rating">
+    <span class="star">&#9733;</span>
+    <span class="star">&#9733;</span>
+    <span class="star">&#9733;</span>
+    <span class="star">&#9733;</span>
+    <span class="star">&#9734;</span>
+  </div>
+</div>

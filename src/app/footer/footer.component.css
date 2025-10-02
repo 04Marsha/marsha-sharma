@@ -10,15 +10,38 @@
   box-shadow: 0 2px 8px rgba(255, 255, 255, 0.3);
 }
 
-.icons {
+.footer-text {
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: space-between;
   padding: 0 3rem;
 }
 
-img {
-  height: 40px;
+.rate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.rate-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: #8a8a8a;
+}
+
+.emogi {
+  font-size: 2.5rem;
+}
+
+.left-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 
 .text {
@@ -33,8 +56,12 @@ img {
   gap: 10px;
 }
 
-.rating .star {
-  font-size: 40px;
-  color: gold;
-  margin-right: 4px;
+img {
+  height: 40px;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

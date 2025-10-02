@@ -6,6 +6,7 @@ import { WorkComponent } from './navLinks/work/work.component';
 import { ContactComponent } from './navLinks/contact/contact.component';
 import { CertsComponent } from './navLinks/certs/certs.component';
 import { ExperienceComponent } from './navLinks/experience/experience.component';
+import { RateComponent } from './navLinks/rate/rate.component';
 
 const routes: Routes = [
   { path: '', component: LandingComponent },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'certs', component: CertsComponent },
   { path: 'experience', component: ExperienceComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'rate', component: RateComponent },
 ];
 
 @NgModule({

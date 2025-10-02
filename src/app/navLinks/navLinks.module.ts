@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { CertsComponent } from './certs/certs.component';
 import { RouterModule } from '@angular/router';
 import { ExperienceComponent } from './experience/experience.component';
+import { RateComponent } from './rate/rate.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ExperienceComponent } from './experience/experience.component';
     ContactComponent,
     WorkComponent,
     CertsComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    RateComponent
   ],
   exports: [AboutComponent, ContactComponent, WorkComponent, CertsComponent],
   imports: [CommonModule, UIElementsModule, FormsModule, RouterModule],
