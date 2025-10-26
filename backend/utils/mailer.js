@@ -1,9 +1,9 @@
-import nodemailer from 'nodemailer';
-import dotenv from 'dotenv';
+import nodemailer from "nodemailer";
+import dotenv from "dotenv";
 dotenv.config();
 
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
+  service: "gmail",
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS,
@@ -11,7 +11,14 @@ const transporter = nodemailer.createTransport({
 });
 
 export function sendMail({ from, to, subject, text }) {
-  return transporter.sendMail({ from, to, subject, text })
-    .then(info => console.log('Email sent:', info.response))
-    .catch(err => console.error('Error sending email:', err));
+  return transporter
+    .sendMail({
+      from: process.env.EMAIL_USER,
+      to,
+      subject,
+      text,
+      replyTo: from,
+    })
+    .then((info) => console.log("Email sent:", info.response))
+    .catch((err) => console.error("Error sending email:", err));
 }
