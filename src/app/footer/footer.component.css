@@ -23,6 +23,7 @@
   justify-content: center;
   flex-direction: row;
   gap: 5px;
+  cursor: pointer;
 }
 
 .rate-text {

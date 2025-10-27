@@ -2,6 +2,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import contactRoutes from './routes/contact.js';
+import feedbackRoutes from './routes/feedback.js';
 
 const app = express();
 app.use(cors());
@@ -17,6 +18,7 @@ mongoose
   .catch((err) => console.error("MongoDB connection error:", err));
 
 app.use("/api/contact", contactRoutes);
+app.use("/api/feedback", feedbackRoutes);
 
 const PORT = process.env.PORT || 5000;;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
