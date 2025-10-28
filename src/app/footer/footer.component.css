@@ -1,7 +1,3 @@
-.footer-container {
-  margin-bottom: 6rem;
-}
-
 .line {
   width: 100%;
   height: 0.1rem;
@@ -15,6 +11,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 3rem;
+  margin-bottom: 5rem;
 }
 
 .rate {
@@ -31,11 +28,11 @@
   align-items: center;
   justify-content: center;
   font-size: 1.3rem;
-  color: #8a8a8a;
+  color: #b4afaf;
 }
 
 .emogi {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 .left-footer {
@@ -65,4 +62,136 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.restart {
+  font-weight: bold;
+  font-size: 1.5rem;
+  background: linear-gradient(90deg, #52d185, #00c27a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  margin-bottom: 1rem;
+}
+
+.restart:hover {
+  transform: scale(1.05);
+}
+
+.funline {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: #8a8a8a;
+}
+
+.funline > h3 {
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+
+@media (max-width: 1024px) {
+  .footer-text {
+    flex-direction: column;
+    padding: 0 2rem;
+    gap: 2rem;
+  }
+
+  .rate-text {
+    font-size: 1.1rem;
+  }
+
+  .emogi {
+    font-size: 1.5rem;
+  }
+
+  .left-footer {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .text {
+    font-size: 1rem;
+    margin-right: 0;
+  }
+
+  img {
+    height: 35px;
+  }
+
+  .restart {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-text {
+    flex-direction: column;
+    padding: 0 1.5rem;
+  }
+
+  .rate-text {
+    font-size: 1rem;
+  }
+
+  .emogi {
+    font-size: 1.3rem;
+  }
+
+  .left-footer {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .text {
+    font-size: 0.9rem;
+    gap: 5px;
+  }
+
+  img {
+    height: 30px;
+  }
+
+  .restart {
+    font-size: 1.2rem;
+  }
+
+  .funline {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .line {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-text {
+    padding: 0 1rem;
+  }
+
+  .rate-text {
+    font-size: 0.9rem;
+  }
+
+  .emogi {
+    font-size: 1.1rem;
+  }
+
+  .text {
+    font-size: 0.8rem;
+  }
+
+  .restart {
+    font-size: 1rem;
+  }
+
+  .funline {
+    font-size: 0.8rem;
+  }
 }

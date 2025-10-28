@@ -181,7 +181,7 @@ button[type="submit"]:hover:not(:disabled) {
 }
 
 .rating-holder {
-  margin: 65px 0;
+  margin: 45px 0 25px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -192,12 +192,15 @@ button[type="submit"]:hover:not(:disabled) {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-bottom: 30px;
 }
 
 .rating-line h3 {
-  font-weight: 300;
+  color: #fee3e3;
+  font-weight: 400;
+  text-align: center;
+  line-height: 35px;
 }
 
 .rating .star {
