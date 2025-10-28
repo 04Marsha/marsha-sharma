@@ -42,7 +42,6 @@ It reflects:
 
 ## 🤝 Contributing
 This is my personal project, but feedback and suggestions are always welcome!
-Feel free to open an issue if you spot improvements.
 
 ---
 
