@@ -1,31 +1,34 @@
-import nodemailer from "nodemailer";
+import sgMail from "@sendgrid/mail";
 import dotenv from "dotenv";
 dotenv.config();
 
-const transporter = nodemailer.createTransport({
-  // service: "gmail",
-  host: "smtp.gmail.com",
-  port: 465,
-  secure: true,
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
-  },
-});
+sgMail.setApiKey(process.env.SENDGRID_APIKEY);
+
+const SENDER_MAIL = process.env.EMAIL_USER;
 
 export async function sendMail({ from, to, subject, text }) {
+  const message = {
+    from: SENDER_MAIL,
+    to: to,
+    replyTo: from,
+    subject: subject,
+    text: text,
+  };
+
   try {
-    const info = await transporter.sendMail({
-      from: process.env.EMAIL_USER,
-      to,
-      subject,
-      text,
-      replyTo: from,
-    });
-    console.log("Email sent:", info.response);
-    return info;
+    const [response] = await sgMail.send(message);
+    if (response.statusCode === 202) {
+      console.log("Email sent successfully.");
+      return response;
+    } else {
+      console.error(`SendGrid API returned status ${response.statusCode}`);
+      if (response.body) {
+        console.error("SendGrid Response Details:", response.body);
+      }
+      throw new Error(`SendGrid API Error: Status ${response.statusCode}`);
+    }
   } catch (error) {
-    console.error("Error sending email:", error.message);
-    throw error;
+    console.error("Critical email sending failure:", error);
+    throw new Error("Failed to deliver contact message.");
   }
 }
