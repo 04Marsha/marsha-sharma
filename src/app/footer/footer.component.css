@@ -14,25 +14,73 @@
   margin-bottom: 5rem;
 }
 
+.funline {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #8a8a8a;
+}
+
 .rate {
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: row;
-  gap: 5px;
+  gap: 10px;
   cursor: pointer;
+  margin-bottom: 1rem;
 }
 
 .rate-text {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: #b4afaf;
 }
 
-.emogi {
-  font-size: 2rem;
+.arrow {
+  transform: rotate(-90deg);
+  cursor: pointer;
+}
+
+.arrow span {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 2s infinite;
+}
+
+.arrow span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+.arrow span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+}
+
+.rate:hover .rate-text{
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.funline > h3 {
+  font-weight: 400;
 }
 
 .left-footer {
@@ -64,36 +112,6 @@ img {
   align-items: center;
 }
 
-.restart {
-  font-weight: bold;
-  font-size: 1.5rem;
-  background: linear-gradient(90deg, #52d185, #00c27a);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-  margin-bottom: 1rem;
-}
-
-.restart:hover {
-  transform: scale(1.05);
-}
-
-.funline {
-  text-align: center;
-  font-size: 1rem;
-  font-weight: 400;
-  margin-bottom: 1rem;
-  color: #8a8a8a;
-}
-
-.funline > h3 {
-  font-weight: 400;
-  margin-bottom: 1rem;
-}
-
-
 @media (max-width: 1024px) {
   .footer-text {
     flex-direction: column;
@@ -101,16 +119,7 @@ img {
     gap: 2rem;
   }
 
-  .rate-text {
-    font-size: 1.1rem;
-  }
-
-  .emogi {
-    font-size: 1.5rem;
-  }
-
   .left-footer {
-    flex-direction: column;
     gap: 1rem;
   }
 
@@ -123,8 +132,12 @@ img {
     height: 35px;
   }
 
-  .restart {
-    font-size: 1.3rem;
+  .funline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 }
 
@@ -143,7 +156,7 @@ img {
   }
 
   .left-footer {
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 0.5rem;
   }
 
@@ -156,14 +169,16 @@ img {
     height: 30px;
   }
 
-  .restart {
-    font-size: 1.2rem;
-  }
-
   .funline {
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
   }
+
+  .arrow span {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+
 
   .line {
     margin-bottom: 2rem;
@@ -185,10 +200,6 @@ img {
 
   .text {
     font-size: 0.8rem;
-  }
-
-  .restart {
-    font-size: 1rem;
   }
 
   .funline {
