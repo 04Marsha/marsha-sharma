@@ -19,7 +19,7 @@ It’s designed to highlight my journey, technical expertise, and the work I’m
 
 ## 🛠️ Tech Stack
 - **Frontend**: Angular
-- **Styling**: SCSS
+- **Styling**: CSS
 - **Hosting**: GitHub Pages, Render
 
 ---
