@@ -2,7 +2,7 @@ import sgMail from "@sendgrid/mail";
 import dotenv from "dotenv";
 dotenv.config();
 
-sgMail.setApiKey(process.env.SENDGRID_APIKEY);
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 const SENDER_MAIL = process.env.EMAIL_USER;
 
