@@ -46,7 +46,3 @@ Feel free to open an issue if you spot improvements.
 
 ---
 
-## 📜 License
-This project is licensed under the **MIT License**.  
-
----
