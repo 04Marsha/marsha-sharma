@@ -1,12 +1,13 @@
-<div class="loader" *ngIf="isLoading">
+<!-- <div class="loader" *ngIf="isLoading"> -->
+<!-- <div class="loader" >
   <app-loader></app-loader>
-</div>
+</div> -->
 
-<section class="about-container" *ngIf="!isLoading">
-  <a class="back-button" routerLink="/">
-    <i class="fas fa-arrow-left"></i>
-  </a>
-
+<!-- <section class="about-container" *ngIf="!isLoading"> -->
+<a class="back-button delay-fade" (click)="goBack()">
+  <i class="fas fa-arrow-left"></i>
+</a>
+<section class="about-container fade-in page-slide-wrapper">
   <h2 class="section-title">About me</h2>
 
   <div class="about-content">
@@ -30,7 +31,9 @@
       <div class="button">
         <button class="btn btn-pulse">
           <i class="fa fa-download"></i
-          ><a href="assets/Resume_Marsha_Sharma.pdf" download="MarshaSharma_Resume.pdf"
+          ><a
+            href="assets/Resume_Marsha_Sharma.pdf"
+            download="MarshaSharma_Resume.pdf"
             >Resume</a
           >
         </button>

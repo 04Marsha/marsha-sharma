@@ -1,10 +1,11 @@
-<div class="loader" *ngIf="isLoading">
+<!-- <div class="loader" *ngIf="isLoading">
   <app-loader />
-</div>
-<section class="certificates" *ngIf="!isLoading">
-  <a class="back-button" routerLink="/">
-    <i class="fas fa-arrow-left"></i>
-  </a>
+</div> -->
+<!-- <section class="certificates" *ngIf="!isLoading"> -->
+<a class="back-button delay-fade" (click)="goBack()">
+  <i class="fas fa-arrow-left"></i>
+</a>
+<section class="certificates fade-in page-slide-wrapper">
   <h1>Certifications</h1>
 
   <h2>Internships</h2>

@@ -27,26 +27,48 @@ export class LandingComponent implements AfterViewInit {
   constructor(private cdr: ChangeDetectorRef) {}
 
   ngAfterViewInit(): void {
-    setTimeout(() => {
-      this.isLoading = false;
-      this.cdr.detectChanges();
-
+    const visited = localStorage.getItem('landingVisited');
+    if (!visited) {
+      localStorage.setItem('landingVisited', 'true');
       setTimeout(() => {
-        const landing = document.querySelector('.landing-container');
-        if (landing) {
-          landing.classList.add('show');
-        }
-        gsap.to('.intro-text', {
-          opacity: 1,
-          y: 0,
-          duration: 1,
-          ease: 'power3.out',
-          onComplete: () => {
-            this.animateSubtitle();
-          },
-        });
-      }, 50);
-    }, 1000); //scrolling time
+        this.isLoading = false;
+        this.cdr.detectChanges();
+
+        setTimeout(() => {
+          const landing = document.querySelector('.landing-container');
+          if (landing) {
+            landing.classList.add('show');
+          }
+          gsap.to('.intro-text', {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: 'power3.out',
+            onComplete: () => {
+              this.animateSubtitle();
+            },
+          });
+        }, 50);
+      }, 1000); //scrolling time
+    } else this.isLoading = false;
+    this.cdr.detectChanges();
+
+    setTimeout(() => {
+      const landing = document.querySelector('.landing-container');
+      if (landing) {
+        landing.classList.add('show');
+      }
+
+      gsap.to('.intro-text', {
+        opacity: 1,
+        y: 0,
+        duration: 0.6,
+        ease: 'power3.out',
+        onComplete: () => {
+          this.animateSubtitle();
+        },
+      });
+    }, 50);
   }
 
   animateSubtitle() {
@@ -94,5 +116,4 @@ export class LandingComponent implements AfterViewInit {
       });
     });
   }
-
 }

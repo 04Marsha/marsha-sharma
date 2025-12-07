@@ -22,10 +22,11 @@ export class CertificatesComponent implements AfterViewInit {
   @ViewChild('nextBtn') nextBtnRef!: ElementRef;
 
   certificates = [
-    { img: 'assets/certificates/angular.jpg' },
-    { img: 'assets/certificates/MEAN.jpg' },
-    { img: 'assets/certificates/getting_started_with_AI.jpg' },
-    { img: 'assets/certificates/pygame.jpg' },
+    { img: 'assets/certificates/courses/oracle_ai_associate.jpg' },
+    { img: 'assets/certificates/courses/angular.jpg' },
+    { img: 'assets/certificates/courses/MEAN.jpg' },
+    { img: 'assets/certificates/courses/getting_started_with_AI.jpg' },
+    { img: 'assets/certificates/courses/pygame.jpg' },
   ];
 
   currentIndex = 0;
@@ -35,7 +36,7 @@ export class CertificatesComponent implements AfterViewInit {
     this.showSlide(this.currentIndex);
   }
 
-  @HostListener('window:resize', ['$event'])
+  @HostListener('window:resize')
   onResize() {
     this.setSlidesPosition();
     this.showSlide(this.currentIndex);

@@ -1,16 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { AnimatedPageBase } from '../../shared/page.animate';
 
 @Component({
   selector: 'app-about',
   standalone: false,
   templateUrl: './about.component.html',
-  styleUrl: './about.component.css',
+  styleUrls: ['./about.component.css', '../../shared/page.animate.css'],
 })
-export class AboutComponent implements OnInit {
-  isLoading = true;
-  ngOnInit(): void {
-    setTimeout(() => {
-      this.isLoading = false;
-    }, 1000);
+export class AboutComponent extends AnimatedPageBase {
+  constructor(router: Router) {
+    super(router);
   }
 }

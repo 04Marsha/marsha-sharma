@@ -13,9 +13,12 @@ interface ContactFormData {
   selector: 'app-contact',
   standalone: false,
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.css', './contactMediaQueries.css'],
+  styleUrls: [
+    './contact.component.css',
+    './contactMediaQueries.css',
+    '../../shared/page.animate.css',
+  ],
 })
-
 export class ContactComponent implements OnInit {
   isLoading = true;
   formStatus: 'success' | 'error' | null = null;
@@ -36,28 +39,30 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit() {
-  this.isLoading = true;
-  this.formStatus = null;
-  this.http.post(`${environment.apiUrl}/contact`, this.contactData).subscribe({
-    next: () => {
-      this.formStatus = 'success';
-      this.isLoading = false;
-      this.resetForm();
+    this.isLoading = true;
+    this.formStatus = null;
+    this.http
+      .post(`${environment.apiUrl}/contact`, this.contactData)
+      .subscribe({
+        next: () => {
+          this.formStatus = 'success';
+          this.isLoading = false;
+          this.resetForm();
 
-      setTimeout(() => {
-        this.formStatus = null;
-      }, 3000);
-    },
-    error: () => {
-      this.formStatus = 'error';
-      this.isLoading = false;
+          setTimeout(() => {
+            this.formStatus = null;
+          }, 3000);
+        },
+        error: () => {
+          this.formStatus = 'error';
+          this.isLoading = false;
 
-      setTimeout(() => {
-        this.formStatus = null;
-      }, 3000);
-    }
-  });
-}
+          setTimeout(() => {
+            this.formStatus = null;
+          }, 3000);
+        },
+      });
+  }
 
   private resetForm() {
     this.contactData = {

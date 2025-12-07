@@ -1,0 +1,48 @@
+.fade-in {
+  display: block;
+  animation: pageFadeIn 450ms ease-out forwards;
+  overflow-x: hidden;
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+.fade-out {
+  animation: pageFadeOut 160ms ease-in forwards;
+}
+
+@keyframes pageFadeOut {
+  from {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(60%);
+  }
+}
+
+.delay-fade {
+  opacity: 0;
+  animation: showAfterDelay 0.6s ease-out forwards;
+  animation-delay: 1s;
+}
+
+@keyframes showAfterDelay {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

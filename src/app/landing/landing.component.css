@@ -262,3 +262,27 @@ span {
     display: none;
   }
 }
+
+
+
+@keyframes flashReveal {
+  0% {
+    opacity: 0;
+    filter: brightness(2);
+    transform: scale(0.98);
+  }
+  30% {
+    opacity: 1;
+    filter: brightness(1.6);
+    transform: scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    filter: brightness(1);
+    transform: scale(1);
+  }
+}
+
+.flash-fast {
+  animation: flashReveal 0.45s ease-out forwards;
+}
