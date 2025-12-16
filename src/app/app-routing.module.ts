@@ -9,7 +9,7 @@ import { ExperienceComponent } from './navLinks/experience/experience.component'
 import { RateComponent } from './navLinks/rate/rate.component';
 
 const routes: Routes = [
-  { path: '', component: LandingComponent },
+  { path: '', component: LandingComponent, pathMatch: 'full' },
   { path: 'about', component: AboutComponent },
   { path: 'work', component: WorkComponent },
   { path: 'certs', component: CertsComponent },
@@ -19,7 +19,12 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes, {
+      scrollPositionRestoration: 'top',
+      anchorScrolling: 'enabled',
+    }),
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

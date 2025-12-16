@@ -1,12 +1,10 @@
 <div class="loader" *ngIf="isLoading">
-  <app-loader />
+  <app-loader></app-loader>
 </div>
-
-<div class="rate-section" *ngIf="!isLoading">
-  <a class="back-button" routerLink="/">
-    <i class="fas fa-arrow-left"></i>
-  </a>
-
+<a class="back-button delay-fade" (click)="goBack()">
+  <i class="fas fa-arrow-left"></i>
+</a>
+<div *ngIf="!isLoading" class="rate-section fade-in page-slide-wrapper">
   <div class="rate-form-section">
     <h2>Rate my profile</h2>
     <form
@@ -38,7 +36,10 @@
         [ngClass]="{ invalid: formStatus === 'error' && rating === 0 }"
       >
         <div class="rating-line">
-          <h3>How many stars does my profile deserve? <br /> Judging allowed here&nbsp; (ʘ‿ʘ)</h3>
+          <h3>
+            How many stars does my profile deserve? <br />
+            Judging allowed here&nbsp; (ʘ‿ʘ)
+          </h3>
         </div>
         <div class="rating">
           <span
@@ -68,7 +69,10 @@
         ></textarea>
       </div>
 
-      <button type="submit" [disabled]="!feedbackForm.form.valid || rating === 0">
+      <button
+        type="submit"
+        [disabled]="!feedbackForm.form.valid || rating === 0"
+      >
         Send Message
       </button>
 

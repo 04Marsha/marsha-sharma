@@ -1,17 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { AnimatedPageBase } from '../../shared/page.animate';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-work',
   standalone: false,
   templateUrl: './work.component.html',
-  styleUrls: ['./work.component.css', './workMediaQueries.css'],
+  styleUrls: [
+    './work.component.css',
+    './workMediaQueries.css',
+    '../../shared/page.animate.css',
+  ],
 })
-export class WorkComponent implements OnInit {
-
-  isLoading = true;
-  ngOnInit(): void {
-    setTimeout(() => {
-      this.isLoading = false;
-    }, 1000);
+export class WorkComponent extends AnimatedPageBase {
+  constructor(router: Router) {
+    super(router);
   }
 }

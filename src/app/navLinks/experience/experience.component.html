@@ -1,11 +1,7 @@
-<div class="loader" *ngIf="isLoading">
-  <app-loader></app-loader>
-</div>
-
-<section class="experience" *ngIf="!isLoading">
-  <a class="back-button" routerLink="/">
-    <i class="fas fa-arrow-left"></i>
-  </a>
+<a class="back-button delay-fade" (click)="goBack()">
+  <i class="fas fa-arrow-left"></i>
+</a>
+<section class="experience fade-in page-slide-wrapper">
   <h1>Experience</h1>
 
   <div class="experience-grid">

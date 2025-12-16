@@ -2,6 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { environment } from '../../../environments/environment';
+import { Router } from '@angular/router';
+import { AnimatedPageBase } from '../../shared/page.animate';
 
 interface FeedbackFormData {
   email: string;
@@ -13,16 +15,17 @@ interface FeedbackFormData {
   selector: 'app-rate',
   standalone: false,
   templateUrl: './rate.component.html',
-  styleUrl: './rate.component.css',
+  styleUrls: ['./rate.component.css', '../../shared/page.animate.css'],
 })
-export class RateComponent implements OnInit {
-  isLoading = true;
+export class RateComponent extends AnimatedPageBase {
   formStatus: 'success' | 'error' | null = null;
-
+  isLoading = false;
   rating = 0;
   stars = [1, 2, 3, 4, 5];
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, router: Router) {
+    super(router);
+  }
 
   feedbackData: FeedbackFormData = {
     email: '',
@@ -30,11 +33,6 @@ export class RateComponent implements OnInit {
     note: '',
   };
 
-  ngOnInit(): void {
-    setTimeout(() => {
-      this.isLoading = false;
-    }, 1000);
-  }
 
   setRating(value: number) {
     this.rating = value;

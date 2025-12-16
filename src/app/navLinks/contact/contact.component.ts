@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
+import { AnimatedPageBase } from '../../shared/page.animate';
+import { Router } from '@angular/router';
 
 interface ContactFormData {
   name: string;
@@ -19,11 +21,13 @@ interface ContactFormData {
     '../../shared/page.animate.css',
   ],
 })
-export class ContactComponent implements OnInit {
-  isLoading = true;
+export class ContactComponent extends AnimatedPageBase {
+  isLoading = false;
   formStatus: 'success' | 'error' | null = null;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, router: Router) {
+    super(router);
+  }
 
   contactData: ContactFormData = {
     name: '',
@@ -32,15 +36,12 @@ export class ContactComponent implements OnInit {
     message: '',
   };
 
-  ngOnInit(): void {
-    setTimeout(() => {
-      this.isLoading = false;
-    }, 1000);
-  }
-
   onSubmit() {
+    if(this.isLoading) return;
+
     this.isLoading = true;
     this.formStatus = null;
+
     this.http
       .post(`${environment.apiUrl}/contact`, this.contactData)
       .subscribe({

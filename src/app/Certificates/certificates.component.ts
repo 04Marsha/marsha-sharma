@@ -12,7 +12,7 @@ import {
   selector: 'app-certificates',
   standalone: false,
   templateUrl: './certificates.component.html',
-  styleUrl: './certificates.component.css',
+  styleUrls: ['./certificates.component.css'],
 })
 export class CertificatesComponent implements AfterViewInit {
   @ViewChild('track') trackRef!: ElementRef;

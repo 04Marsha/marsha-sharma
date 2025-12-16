@@ -1,10 +1,7 @@
-<div class="loader" *ngIf="isLoading">
-  <app-loader />
-</div>
-<section class="work-section" *ngIf="!isLoading">
-  <a class="back-button" routerLink="/">
-    <i class="fas fa-arrow-left"></i>
-  </a>
+<a class="back-button delay-fade" (click)="goBack()">
+  <i class="fas fa-arrow-left"></i>
+</a>
+<section class="work-section fade-in page-slide-wrapper" >
   <h2 class="section-title">Work</h2>
 
   <div class="projects-grid">
