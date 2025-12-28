@@ -9,7 +9,7 @@ import { ExperienceComponent } from './navLinks/experience/experience.component'
 import { RateComponent } from './navLinks/rate/rate.component';
 
 const routes: Routes = [
-  { path: '', component: LandingComponent, pathMatch: 'full' },
+  { path: '', component: LandingComponent },
   { path: 'about', component: AboutComponent },
   { path: 'work', component: WorkComponent },
   { path: 'certs', component: CertsComponent },

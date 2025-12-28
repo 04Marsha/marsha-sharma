@@ -13,7 +13,8 @@
   flex-direction: column;
   justify-content: left;
   padding-left: 120px;
-  padding-top: 15vh;
+  /* padding-top: 15vh; */
+  padding-top: 25vh;
   overflow: hidden;
   z-index: 0;
 
